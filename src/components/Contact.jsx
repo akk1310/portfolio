@@ -1,13 +1,13 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Contact() {
   const {
     register,
     handleSubmit,
-
     formState: { errors },
   } = useForm();
 
@@ -18,31 +18,74 @@ function Contact() {
       message: data.message,
     };
     try {
-      await axios.post("https://getform.io/f/raeqjora", userInfo);
-      toast.success("Your message has been sent");
+      await axios.post("https://getform.io/f/adryrlka", userInfo);
+      toast('✅ Message has been sent', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        // toastId: 'success1'
+        
+        
+        
+        });
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong");
+      toast('❌ Error sending the message', {
+        position: "top-right",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        // toastId: 'success1'
+        
+        
+        
+        });
     }
   };
   return (
     <>
+    <ToastContainer
+                position="top-right"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={true}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+                containerId="containerA"
+               
+            />
+            {/* Same as */}
+            <ToastContainer />
       <div
         name="Contact"
         className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-16"
       >
-        <h1 className="text-3xl font-bold mb-4">Contact me</h1>
-        <span>Please fill out the form below to contact me</span>
+        <p className="text-center text-gray-500">Get in touch</p>
+        <h1 className="text-3xl  mb-4 text-center">Contact me</h1>
+        <span className="flex justify-center">Please fill out the form below to contact me</span>
         <div className=" flex flex-col items-center justify-center mt-5">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            // action="https://getform.io/f/raeqjora"
+            // action="https://getform.io/f/adryrlka"
             // method="POST"
             className="bg-slate-200 w-96 px-8 py-6 rounded-xl"
           >
             <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>
             <div className="flex flex-col mb-4">
-              <label className="block text-gray-700">FullName</label>
+              <label className="block text-gray-700">Full Name</label>
               <input
                 {...register("name", { required: true })}
                 className="shadow rounded-lg appearance-none border  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -51,7 +94,7 @@ function Contact() {
                 type="text"
                 placeholder="Enter your fullname"
               />
-              {errors.name && <span>This field is required</span>}
+              {errors.name && <span className="text-red-600">This field is required</span>}
             </div>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Email Address</label>
@@ -63,7 +106,7 @@ function Contact() {
                 type="text"
                 placeholder="Enter your email address"
               />
-              {errors.email && <span>This field is required</span>}
+              {errors.email && <span className="text-red-600">This field is required</span>}
             </div>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Message</label>
@@ -73,16 +116,25 @@ function Contact() {
                 id="message"
                 name="message"
                 type="text"
-                placeholder="Enter your Query"
+                placeholder="Enter your Message"
               />
-              {errors.message && <span>This field is required</span>}
+              {errors.message && <span className="text-red-600">This field is required</span>}
             </div>
+            <div className="flex justify-between">
+
             <button
               type="submit"
-              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-700 duration-300"
-            >
+              className="bg-black text-white rounded-xl px-3 py-2 hover:bg-slate-600 duration-300"
+              >
               Send
             </button>
+            <button target="_blank" className="bg-black text-sm text-white rounded-xl px-3 py-2 hover:bg-slate-600 duration-300">
+            <a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">
+            adnankundlik99@gmail.com
+            </a>
+               </button>
+            
+            </div>
           </form>
         </div>
       </div>
