@@ -66,7 +66,7 @@ function Skills() {
                 />
                 <div>
                   <h3>HTML</h3>
-                  <p>Experienced</p>
+                  <p>Advanced</p>
                 </div>
               </article>
               <article className="flex gap-2">
@@ -77,7 +77,7 @@ function Skills() {
                 />
                 <div>
                   <h3>CSS</h3>
-                  <p>Experienced</p>
+                  <p>Advanced</p>
                 </div>
               </article>
 
@@ -89,7 +89,7 @@ function Skills() {
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Experienced</p>
+                  <p>Advanced</p>
                 </div>
               </article>
 
@@ -101,7 +101,7 @@ function Skills() {
                 />
                 <div>
                   <h3>React</h3>
-                  <p>Intermediate</p>
+                  <p>Advanced</p>
                 </div>
               </article>
 
@@ -124,7 +124,7 @@ function Skills() {
                 />
                 <div>
                   <h3>Bootstrap</h3>
-                  <p>Experienced</p>
+                  <p>Advanced</p>
                 </div>
               </article>
 
@@ -148,13 +148,24 @@ function Skills() {
 
               <article className="flex gap-2">
                 <img
+                  src="https://images.vexels.com/media/users/3/166401/isolated/lists/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon.png"
+                  alt="Experience icon"
+                  className="icon w-28 cursor-pointer hover:scale-110 duration-300"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article className="flex gap-2">
+                <img
                   src="mongodb.jpg"
                   alt="Experience icon"
                   className="icon w-28 cursor-pointer hover:scale-110 duration-300"
                 />
                 <div>
                   <h3>Mongodb</h3>
-                  <p>Basic</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article className="flex gap-2">
