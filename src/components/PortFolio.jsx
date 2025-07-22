@@ -8,11 +8,12 @@ import notes from "./Images/image3.png";
 import pomodoro from "./Images/image4.png";
 import pong from "./Images/image5.png";
 import turt from "./Images/image6.png";
+import vibeShare from "./Images/image.png";
 function PortFolio() {
   const cardItem = [
      {
       id: 1,
-      logo: blogger,
+      logo: vibeShare,
       name: "Vibe-SHARE",
       desc:"Video Sharing App(Youtube-Twitter)",
       link:"https://vibeshare-ermv.onrender.com/",
