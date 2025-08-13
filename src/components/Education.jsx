@@ -6,7 +6,7 @@ function Education() {
       id: 1,
       link: "https://mu.ac.in/",
       year: "2021-2025",
-      degree: "Pursuing B.E Engineering in Computer Science",
+      degree: "Completed B.E Engineering in Computer Science CGPA-(8.4)",
       from: "Mumbai University",
     },
     {
